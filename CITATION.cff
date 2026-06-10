@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use scCAT in your research, please cite the following paper."
+title: "scCAT: confidence-weighted adaptive triplet learning for single-cell data integration"
+abstract: >
+  scCAT is a single-cell RNA-seq batch-integration method that combines
+  confidence-weighted triplet construction, adaptive margins and
+  batch-specific local-topology protection.  It is designed for
+  compositionally unbalanced datasets where some cell populations are
+  batch-specific, and it explicitly avoids overcorrection of cells that
+  lack reliable cross-batch counterparts.
+type: software
+version: 1.0.0
+date-released: 2026-05-26
+authors:
+  - family-names: Chen
+    given-names: Mintong
+    affiliation: "[Affiliation TBD]"
+  - family-names: "[Corresponding author family]"
+    given-names: "[Corresponding author given]"
+    email: "[TBD]"
+keywords:
+  - single-cell
+  - scRNA-seq
+  - batch integration
+  - triplet learning
+  - overcorrection
+  - batch-specific cells
+license: MIT
+repository-code: "https://github.com/[USER]/scCAT"
+preferred-citation:
+  type: article
+  title: "scCAT preserves batch-specific cell states through confidence-weighted triplet learning in single-cell data integration"
+  authors:
+    - family-names: Chen
+      given-names: Mintong
+    - family-names: "[Corresponding author family]"
+      given-names: "[Corresponding author given]"
+  journal: "[Journal TBD]"
+  year: 2026
+  doi: "[DOI TBD]"

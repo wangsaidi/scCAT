@@ -1,0 +1,43 @@
+scCAT demo — synthetic HDC-like dataset
+============================================================
+
+Cells: 480 | Genes: 800 | Batches: 2 | Cell types: 4
+
+Per-(batch, cell type) composition:
+cell_type  CD141  CD1C  DoubleNeg  pDC
+batch                                 
+B0            80     0         80   80
+B1             0    80         80   80
+
+Note: CD141 is present only in Batch 0 and CD1C only in Batch 1 — these are the 'batch-specific' cell types.
+
+============================================================
+RESULTS
+============================================================
+
+Per-cell-type k-means cluster purity (1.0 = perfectly preserved):
+  CD141        1.000  ← batch-specific
+  CD1C         1.000  ← batch-specific
+  DoubleNeg    1.000
+  pDC          1.000
+
+  Mean: 1.000
+
+kNN batch-mixing score (0 = isolated, 1 = perfectly mixed):
+  0.284
+
+============================================================
+HOW TO READ THESE RESULTS
+============================================================
+
+If scCAT is working correctly you should see:
+
+  1. Per-cell-type purity ≥ 0.85 for ALL four cell types, INCLUDING the two batch-specific ones (CD141, CD1C). This means scCAT preserves the batch-specific cells as distinct clusters rather than absorbing them into the shared clusters.
+
+  2. kNN batch-mixing in the range 0.3 - 0.6. The score will not approach 1.0 because two of the four cell types are batch-specific — those cells are correctly NOT mixed across batches (there is nothing in the other batch to mix with).
+
+  3. In demo_umap_celltype.png, you should see four well-separated clusters (pDC, DoubleNeg, CD141, CD1C).
+
+  4. In demo_umap_batch.png, the shared cell types (pDC and DoubleNeg) should show mixed colours (B0 and B1 interleaved), while the batch-specific clusters (CD141, CD1C) will each be a single colour — exactly as expected.
+
+See demo/INTERPRETATION.md for the full walkthrough.

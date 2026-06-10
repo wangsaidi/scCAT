@@ -1,0 +1,7 @@
+# Additional dependencies needed only for reproducing the manuscript figures.
+matplotlib>=3.6
+seaborn>=0.12
+adjustText>=1.0
+openpyxl>=3.1
+python-docx>=0.8.11
+psutil>=5.9

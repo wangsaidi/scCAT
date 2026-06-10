@@ -1,0 +1,7 @@
+metric,value
+cluster_purity_pDC,1.0
+cluster_purity_DoubleNeg,1.0
+cluster_purity_CD141,1.0
+cluster_purity_CD1C,1.0
+cluster_purity_mean,1.0
+knn_batch_mixing,0.284
